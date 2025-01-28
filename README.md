@@ -11,10 +11,9 @@ Welcome to the **Schwab AutoTrader** repository!  This Python application connec
 - **Authentication**: Securely handles API authentication, including `client_secrets`, `auth_tokens`, and `access_tokens` with encryption and passwords.
 - **Customizable Trading Logic**: Supports the development of custom trading strategies using python or the language of your choice.
 - **Email Alerting**: Sends automatic emails with infromation on, trade status, trigger-conditions, general market data etc. 
-- **Trading!!!**: Lastly and most obviously, this application allows users to interface with their own Schwab brokerage account to trade stocks. 
+- **Trading!!!**: Lastly and most obviously, this application allows users to interface with their own Schwab brokerage account to trade stocks. [Examples Trades](docs/orderform.md).
 
 ## Setup Instructions
-
 
 ### 1. Set up your Schwab Credentials 
  1) Create a Schwab account at [Schwab.com](https://www.schwab.com/client-home). You then need to be approved for an account: (Brokerage, IRA, 401k, etc)
@@ -57,12 +56,16 @@ To set up the environment simply run ```python3 setup.py```.
 
 ### 3 Set up the Schwab Configuration Files
    The first thing the program will ask you for is an Encryption Password. If you forget this password it is not the end of the world. The point of the password is to secure your App Key, App Secret and Scwhab Authentication creds.
-   When this application has been activated it can bybass schwab authentication for 6-7 days, so keeping these valid in an encyrpted file is importand. You can disable this if you want. 
+   When this application has been activated it can bybass schwab authentication for 6-7 days, so keeping these protected in an encyrpted file is Importanto! You can disable this if you want. 
    ```bash
       Enter encryption password to secure schwab-credentials and schwab-tokens.
       If you have already entered this, please submit the password you set.
    ```
 
-
-
+### 4 Retrieve Schwab Authetication Tokens. 
+   The application will prompt you to connect to schwab.com, follow the instructions there and paste the return URL in the command line output where you see: 
+   ```bash
+      [INFO] Paste Returned URL:
+   ```
+   If this step is confusing, here is a detailed breakdown of how to get the return URL. [Schwab-Access-Tokens-Docs](docs/schwab-authentication.md)
 
