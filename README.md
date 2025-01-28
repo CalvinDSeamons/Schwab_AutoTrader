@@ -35,11 +35,34 @@ Welcome to the **Schwab AutoTrader** repository!  This Python application connec
 
 
 
-### 2. Clone the Repository
+### 2. Clone the Repository & Installation
+To install the SchwabAuto-Trader run the following commands below.
 
 ```bash
-git clone <private_repo_url>
-cd schwab-trader-app
+cd /$wherever_you_want_to_install/
+git clone git@github.com:CalvinDSeamons/Schwab_AutoTrader.git
+cd Schwab_AutoTrader/
+```
+To set up the environment simply run ```python3 setup.py```.
+   If you would like to setup the environment manually execute the following commands:
+   ```bash
+      python3 -m venv venv # This sets up a python virtual environment
+      source vnev/bin/activate
+      # To leave the venv run 'deactivate'
+   ```
+   Install the following packages:
+   ```bash
+      pip install requests pyyaml cryptography 
+   ```
+
+### 3 Set up the Schwab Configuration Files
+   The first thing the program will ask you for is an Encryption Password. If you forget this password it is not the end of the world. The point of the password is to secure your App Key, App Secret and Scwhab Authentication creds.
+   When this application has been activated it can bybass schwab authentication for 6-7 days, so keeping these valid in an encyrpted file is importand. You can disable this if you want. 
+   ```bash
+      Enter encryption password to secure schwab-credentials and schwab-tokens.
+      If you have already entered this, please submit the password you set.
+   ```
+
 
 
 
