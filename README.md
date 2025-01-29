@@ -35,37 +35,51 @@ Welcome to the **Schwab AutoTrader** repository!  This Python application connec
 
 
 ### 2. Clone the Repository & Installation
-To install the SchwabAuto-Trader run the following commands below.
+   1) Start by cloning this repository on github: [SchwabAutoTrader](https://github.com/CalvinDSeamons/Schwab_AutoTrader.git).
 
-```bash
-cd /$wherever_you_want_to_install/
-git clone git@github.com:CalvinDSeamons/Schwab_AutoTrader.git
-cd Schwab_AutoTrader/
-```
-To set up the environment simply run ```python3 setup.py```.
-   If you would like to setup the environment manually execute the following commands:
-   ```bash
-      python3 -m venv venv # This sets up a python virtual environment
-      source vnev/bin/activate
-      # To leave the venv run 'deactivate'
-   ```
-   Install the following packages:
-   ```bash
-      pip install requests pyyaml cryptography 
-   ```
+      ```bash
+         cd /$wherever_you_want_to_install/
+         git clone git@github.com:CalvinDSeamons/Schwab_AutoTrader.git
+         cd Schwab_AutoTrader/
+      ```
+   2) To set up the environment simply run ```python3 setup.py```.
+      If you would like to setup the environment manually execute the following commands:
+      ```bash
+         python3 -m venv venv # This sets up a python virtual environment
+         source vnev/bin/activate
+         # To leave the venv run 'deactivate'
+      ```
+      Install the following packages:
+      ```bash
+         pip install requests pyyaml cryptography 
+      ```
 
 ### 3 Set up the Schwab Configuration Files
    The first thing the program will ask you for is an Encryption Password. If you forget this password it is not the end of the world. The point of the password is to secure your App Key, App Secret and Scwhab Authentication creds.
    When this application has been activated it can bybass schwab authentication for 6-7 days, so keeping these protected in an encyrpted file is Importanto! You can disable this if you want. 
-   ```bash
-      Enter encryption password to secure schwab-credentials and schwab-tokens.
-      If you have already entered this, please submit the password you set.
-   ```
+   1) Enter a encryption password you'll use to refresh the Access-Token and Refresh-Token.
+      ```bash
+      % "Enter encryption password to secure schwab-credentials and schwab-tokens."
+      % "If you have already entered this, please submit the password you set:" $Your_password
+      ```
+   2) Add the App-Key and App-Secret to the configuration file. If this is your first time running the application you'll be prompted in the commandline to add them.
+      ```bash
+      % "We've detected an Empty Schwab Credential file! This will be saved in an encryped file at ~/.schwab_auto_trader/schwab-credentials.yaml"
+      % "Please provide your APP_KEY [found on developer.schwab.com]:" $your_app_key
+      % "Please provide your APP_SECRET [found on developer.schwab.com]:" $your_app_secret
+      ```
 
 ### 4 Retrieve Schwab Authetication Tokens. 
-   The application will prompt you to connect to schwab.com, follow the instructions there and paste the return URL in the command line output where you see: 
-   ```bash
-      [INFO] Paste Returned URL:
-   ```
-   If this step is confusing, here is a detailed breakdown of how to get the return URL. [Schwab-Access-Tokens-Docs](docs/schwab-authentication.md)
+   1) The application will prompt you to connect to schwab.com, follow the instructions there and paste the return URL in the command line output where you see: 
+      ```bash
+      % [INFO] Paste Returned URL:
+      ```
+      If this step is confusing, here is a detailed breakdown of how to get the return URL. [Retrieve Schwab Authentication Token](docs/schwab-authentication.md).
 
+   2) One you past the URL (if valid) you will see the following message: 
+      ```bash
+         Paste Returned URL: https://127.0.0.1/?code=$your_own_unique_code&session=$your_own_unique_session
+         [SUCCESS] Authentication with Schwab successful.
+      ```
+   3) If everything worked as expected, you are now able to connect to the schwab-api for market prodction and trading commands, have fun!
+      You can run custom commands in the command line, build custom trades/market visualizations etc, or use the flask web interface to conduct trades. 

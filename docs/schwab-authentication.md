@@ -4,3 +4,12 @@ The first time you run this program (or about every 6-7days) you will need re-au
 
 ### How to access Schwab Authentication Tokens.
 
+1) Upon running the script for the first time on the command line you will see the following image below (One you enter your encryption password).
+
+    ![CommandLine Image](../img/cmdline-auth-launch.png)
+
+2) Your default browser should open a url link to schwab. Login to schwab, this is NOT your schwab-developer account but your Brokerage login info.
+    ![First Schwab Image](../img/schwab-login.png)
+
+3) You'll be prompted to confirm youre identify as follows: 
+    ![Confirm Schwab ID](../img/confirm-schwab-id.png)
