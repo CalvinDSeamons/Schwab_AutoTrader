@@ -1,6 +1,6 @@
 # Schwab AutoTrader
 
-Welcome to the **Schwab AutoTrader** repository!  This Python application connects to the Schwab API to enable automated trading and real-time market monitoring. Designed for traders and developers, it offers a flexible and efficient way to interact with financial data while supporting advanced strategies and seamless integration into your workflow.
+Welcome to the **Schwab AutoTrader** repository!  This Python application connects to the Schwab API to enable automated trading and real-time market monitoring. Designed for traders and developers, it offers a flexible and efficient way to interact with financial data while supporting advanced strategies and seamless integration into your workflow. (This summary was definitely not written by chatGPT).
 
 ---
 
