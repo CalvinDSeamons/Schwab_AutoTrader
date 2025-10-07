@@ -70,7 +70,7 @@ Welcome to the **Schwab AutoTrader** repository!  This Python application connec
       ```
 
 ### 4 Retrieve Schwab Authetication Tokens. 
-   1) The application will prompt you to connect to schwab.com, follow the instructions there and paste the return URL in the command line output where you see: 
+   1) This application will prompt you to connect to schwab.com, follow the instructions there and paste the return URL in the command line output where you see: 
       ```bash
       % [INFO] Paste Returned URL:
       ```
